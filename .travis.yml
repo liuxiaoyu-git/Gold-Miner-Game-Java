@@ -13,8 +13,7 @@ cache:
   - $HOME/.m2
 
 before_install:
-  - docker login -u "$QUAY_USER" -p "$QUAY_PASS" quay.io
-  - docker login -u "$REDHAT_USER" -p "$REDHAT_PASS" registry.redhat.io
+  - echo "$AUTHFILE" | base64 -d > ~/.docker/config.json
 
 install:
   - curl -sL -o $HOME/s2i.tar.gz https://github.com/openshift/source-to-image/releases/download/v1.3.0/source-to-image-v1.3.0-eed2850f-linux-amd64.tar.gz
