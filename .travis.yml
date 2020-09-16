@@ -21,11 +21,11 @@ install:
 
 script:
   - mvn package
-  - echo "$RH_PASSWORD" | docker login -u "$RH_USERNAME" --password-stdin registry.redhat.io
+  - echo "$RH_PASSWORD" | docker login --username="$RH_USERNAME" --password-stdin registry.redhat.io
   - ${HOME}/bin/s2i build . registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7 $IMAGE_REPO:$TRAVIS_BRANCH-release
 
 deploy:
 - provider: script
-  script: echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" --password-stdin quay.io && docker push $IMAGE_REPO:$TRAVIS_BRANCH-release
+  script: echo "$QUAY_PASSWORD" | docker login --username="$QUAY_USERNAME" --password-stdin quay.io && docker push $IMAGE_REPO:$TRAVIS_BRANCH-release
   on:
     branch: dso4
