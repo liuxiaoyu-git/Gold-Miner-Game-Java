@@ -22,4 +22,9 @@ install:
 script:
   - mvn package
   - ${HOME}/bin/s2i build . registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7 $IMAGE_REPO:$TRAVIS_BRANCH-release
-  - docker push $IMAGE_REPO:$TRAVIS_BRANCH-release
+
+deploy:
+- provider: script
+  script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin quay.io && docker push $IMAGE_REPO:$TRAVIS_BRANCH-release
+  on:
+    branch: dso4
