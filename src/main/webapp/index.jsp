@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
 </head>
-<body></body>
+<body>
 <script type="text/javascript" src="js/gold.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
-</html>
+</body></html>
