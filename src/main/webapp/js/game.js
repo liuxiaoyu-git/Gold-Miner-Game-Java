@@ -1,11 +1,11 @@
 var bg = new Image();
 bg.src="img/background.png";
 var hook = new Image();
-hook.src="img/hook.png";
+hook.src="img/hook1.png";
 var targetIM = new Image();
-targetIM.src="img/target.png";
+targetIM.src="img/target1.png";
 var dolarIM = new Image();
-dolarIM.src="img/dolar.png";
+dolarIM.src="img/dolar1.png";
 var levelIM = new Image();
 levelIM.src="img/level.png";
 var clockIM = new Image();
