@@ -1,5 +1,5 @@
 var bg = new Image();
-bg.src="img/background1.png";
+bg.src="img/background.png";
 var hook = new Image();
 hook.src="img/hook.png";
 var targetIM = new Image();
