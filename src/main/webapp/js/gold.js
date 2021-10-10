@@ -1,5 +1,5 @@
 var goldIm = new Image();
-goldIm.src="img/gold1.png";
+goldIm.src="img/gold1.png"; 
 var rockIm = new Image();
 rockIm.src="img/rock1.png";
 var diamondIM = new Image();
