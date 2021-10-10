@@ -1,9 +1,9 @@
 var goldIm = new Image();
-goldIm.src="images/gold.png";
+goldIm.src="img/gold.png";
 var rockIm = new Image();
-rockIm.src="images/rock.png";
+rockIm.src="img/rock.png";
 var diamondIM = new Image();
-diamondIM.src="images/diamond.png";
+diamondIM.src="img/diamond.png";
 
 class gold {
     constructor(game) {
